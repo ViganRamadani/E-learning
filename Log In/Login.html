@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="style-Register.css">
+    <link rel="stylesheet" href="style-Login.css">
 </head>
 <body onload="myFunction()" style="margin:0;">
     <div id="loader"><img src="../Image/Preloader.png" width="190px" alt=""></div>
@@ -13,27 +13,20 @@
 
         <div class="register-form">
             <form  method="post">
-                <h4>Create a new account.</h4>
-    <br>
-                <div  class="text-danger"></div>
-                <div class="form-group">
-                    
-                    <input id="email"  class="form-control" placeholder="email" />
-                  
-                </div>
-                <div class="form-group">
-                   
-                    <input id="password" class="form-control" placeholder="password" />
-                   
-                </div>
-               
-                <button type="submit" class="btn btn-primary">Register</button>
+                <h4>Login</h4>
+                <input id="email" name="email" type="text" placeholder="Email">
+            <input id="password" name="password"  type="password" placeholder="Password"><br>
+            <input type="checkbox">
+            <label for="">Remember me</label>
+            
+            <button type="submit" value="Submit">Submit</button>
+            
+           
+            <button > <a href="../SignUp/signup.php">SignUp</a> </button>
             </form>
-           <button class="btn btn-primary" ><a href="../Log In/Login.html"> I already have an account</a></button>
+           
         </div>
-        <br>
-        <br>
-        <br>
+      
         <div >
             <section>
                 <h5>Use another service to register.</h5>
