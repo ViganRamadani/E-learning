@@ -3,7 +3,8 @@
 <head>
 
 </head>
-<body>
+<body  onload="myFunction()" style="margin:0;">
+  <div id="loader"><img src="../Image/mp4.png" width="190px" alt=""></div>
   <h1 style="text-align: center;">Tutorials</h1>
 <class class="grid-container">
   <div class="grid-item">
@@ -142,7 +143,18 @@
 </div>
 </body>
 </html>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+   var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
   (function(window) {
         function setupVideo()
         {
@@ -208,6 +220,55 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////
 </script>
 <style>
+   /* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  /* border: 16px solid #f3f3f3; */
+  border-radius: 50%;
+  /* border-top: 16px solid #3498db; */
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.content {
+  position: relative;
+  -webkit-animation-name: content;
+  -webkit-animation-duration: 1s;
+  animation-name: content;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes content {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes content { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
     .grid-container {
       display: grid;
       grid-gap: 25px 50px;
