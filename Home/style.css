@@ -1,0 +1,54 @@
+ #tutorials {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tutorial-title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.code{
+  width: 65%;
+  margin: auto;
+}
+
+#html {
+  background-color: rgb(152, 154, 160);
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.html-code {
+  background-color: rgb(89, 89, 90);
+  color: #fff;
+}
+
+.css-code {
+
+}
+
+#css {
+  background: rgb(228,255,0);
+  background: linear-gradient(90deg, rgba(228,255,0,1) 0%, rgba(44,255,0,1) 14%, rgba(0,255,252,1) 31%, rgba(9,30,219,1) 48%, rgba(143,6,221,1) 65%, rgba(217,12,167,1) 81%, rgba(255,0,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#js {
+  background: rgb(255, 255, 121);
+  margin-bottom: 0;
+}
+
+.content-code-result {
+  background: #fff;
+  color: #000;
+}
+
+
+ 
