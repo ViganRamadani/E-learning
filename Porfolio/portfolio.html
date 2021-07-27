@@ -2,22 +2,40 @@
 <html>
     <head>
         <title>Portofolio</title>
-        <link rel="stylesheet" href="style-Portfolio.css">
+  <link rel="stylesheet" href="../Style/styleGlobal.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style-Portfolio.css">
     </head>
     <body>
-      <ul>
-        <li><a class="active" href="../Home/index.html">Home</a></li>
-        <li><a href="../About/index.html">About Us</a></li>
-          <li> <a href="../Contact/index.html">Contact Us</a></li>
-          <li><a href="../Porfolio/portfolio.html">Portfolio</a></li>
-            <li> <a href="../Video Tutorial/VideoTutorial.html">Video Tutorials</a></li>
-            
-            <li ><a class="active" id="login" href="../Log In/Login.html">Login</a></li>
-              <li> <a class="active" id="register" href="../Register/Register.html">Register</a></li>
-      </ul>
-        <header>
+    <header>
+    <div class="header-left">
+      <a href="../Home/index.html">Home</a>
+      <div class="btn-group">
+        <button onclick="goTutorials();" class="btn dropdown-button" type="button">
+          Tutorials
+        </button>
+        <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="../Tutorial/html.html">HTML</a></li>
+          <li><a class="dropdown-item" href="../Tutorial/css.html">CSS</a></li>
+        </ul>
+      </div>
+
+      <a href="../AboutUs/index.html">About Us</a>
+      <a href="../Contact/index.html">Contact Us</a>
+      <a href="../Porfolio/portfolio.html">Portfolio</a>
+      <a href="../Video Tutorial/VideoTutorial.html">Video Tutorials</a>
+    </div>
+    <div class="header-right">
+      <a id="login" href="../Log In/Login.html">Login</a>
+      <a id="register" href="../Register/Register.html">Register</a>
+    </div>
+  </header>
+
+      
+        <div>
 
         <div class="part-1">
           
@@ -25,7 +43,7 @@
         <div class="heading">
             <h1>PORTFOLIO</h1>
         </div>
-        </header>
+        </div>
         
     
 
