@@ -69,7 +69,13 @@ header a {
   transition-duration: 0s;
 }
 
-header a:hover, .dropdown-toggle:hover {
+.dropdown-button {
+  font-size: 20px !important;
+}
+
+header a:hover,
+.dropdown-toggle:hover,
+.dropdown-button:hover {
   color: #fff !important;
   background: rgb(85, 175, 104);
 }
@@ -96,7 +102,6 @@ header a:hover, .dropdown-toggle:hover {
 }
 
 footer {
-  padding-top: 20px;
   margin-top: auto;
   width: 100%;
   height: 60px;
@@ -105,5 +110,18 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px 250px 0;
+
+}
+footer div {
+  display: flex;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: rgb(202, 202, 202);
 }

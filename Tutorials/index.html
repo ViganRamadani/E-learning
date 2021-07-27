@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials</title>
+  <link rel="stylesheet" href="../Style/styleGlobal.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/default.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+    <div class="header-left">
+      <a href="../Home/index.html">Home</a>
+      <div class="btn-group">
+        <button onclick="goTutorials();" class="btn dropdown-button" type="button">
+          Tutorials
+        </button>
+        <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="html.html">HTML</a></li>
+          <li><a class="dropdown-item" href="css.html">CSS</a></li>
+        </ul>
+      </div>
+
+      <a href="../About/index.html">About Us</a>
+      <a href="../Contact/index.html">Contact Us</a>
+    </div>
+    <div class="header-right">
+      <a id="login" href="../Log In/Login.html">Login</a>
+      <a id="register" href="../Register/Register.html">Register</a>
+    </div>
+  </header>
+  <div class="tutorials-home-main-container go-column">
+    <div class="main-tutorial-list-wrapper align-center go-column">
+        <div class="tutorial-list-wrapper go-row">
+            <a class="tutorial-card-link1 card" href="html.html">
+                <div class="tutorial-card1 card-wrapp go-column ">
+                    <h2  class="tutorial-subtitle subtitle1">HTML</h2>
+                    <p class="hello-world">Hello World</p>
+                    <p id="content-css-color" class="html5">&lt;HTML></p>
+                    <img class="html-ico" src="../Image/html-code.png" alt="html-logo">
+                </div>
+            </a>
+            <a class="tutorial-card-link2 card" href="css.html">
+                <div class="tutorial-card2 card-wrapp go-column justify-center align-center">
+                    <h2 class="tutorial-subtitle subtitle2">CSS</h2>
+                </div>
+            </a>
+        </div>
+        <div class="tutorial-list-wrapper go-row ">
+            <a class="tutorial-card-link3 card" href="#">
+                <div class="tutorial-card3 card-wrapp go-column align-center">
+                    <h2 id="php" class="tutorial-subtitle subtitle3">PHP</h2>
+                    <div class="type_box">
+                        <textarea id="typing-text" aria-label="typing text" readonly></textarea>
+                    </div>
+                </div>
+            </a>
+            <a class="tutorial-card-link4 card" href="#">
+                <div class="tutorial-card4 card-wrapp go-column align-center">
+                    <h2 class="tutorial-subtitle subtitle4">SQL</h2>
+                    <img class="sql-ico" src="../Image/sql-ico.png" alt="SQL Ico">
+                </div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+  <script>
+        (function () {
+        var CharacterPos = 0;
+        var MsgBuffer = "";
+        var TypeDelay = 100; 
+        var NxtMsgDelay = 1000;
+        var MsgIndex = 0;
+        var delay;
+        var MsgArray = ['echo "Hello World!"'];
+
+        function StartTyping() {
+            var id = document.getElementById("typing-text");
+            if (CharacterPos != MsgArray[MsgIndex].length) {
+                MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+                id.value = MsgBuffer+"_";
+                delay = TypeDelay;
+                id.scrollTop = id.scrollHeight; 
+            } else {
+                delay = NxtMsgDelay;
+                MsgBuffer   = "";
+                CharacterPos = -1;
+                if (MsgIndex!=MsgArray.length-1){
+                MsgIndex++;
+                }else {
+                MsgIndex = 0;
+                }
+            }
+            CharacterPos++;
+            setTimeout(StartTyping,delay);
+        }
+        StartTyping();
+    })();
+
+    function goTutorials(){
+      window.location = "/Tutorials/index.html";  
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  height: max-content;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 25px;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.go-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.go-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+.align-center {
+  align-self: center;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  margin: 0 0 10px;
+}
+
+#content-css-color,
+#content-css-color-blue,
+#content-css-color-gray,
+#content-css-color-red,
+#content-css-color-f1f1f1 {
+  color: #cb7832;
+  background: #2b2b2b;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.title1 {
+  text-align: center;
+}
+
+.main-tutorial-list-wrapper {
+  width: 80vw;
+}
+
+.tutorial-list-wrapper {
+  justify-content: space-around;
+}
+
+.tutorial-card-link1,
+.tutorial-card-link2,
+.tutorial-card-link3,
+.tutorial-card-link4 {
+  margin: 25px;
+}
+
+.tutorial-card1,
+.tutorial-card2,
+.tutorial-card3,
+.tutorial-card4 {
+  align-self: center;
+  width: 300px;
+  height: 330px;
+  color: white;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.html-ico {
+  width: 100px;
+}
+
+.subtitle1,
+.hello-world,
+.html5,
+.html-ico,
+.subtitle3,
+.type_box,
+.subtitle4,
+.sql-ico {
+  position: absolute;
+  align-self: center;
+  margin-top: 135px;
+  transition: 0.5s ease;
+}
+
+.hello-world,
+.html5,
+.html-ico {
+  opacity: 0;
+}
+
+.tutorial-card1:hover>.hello-world {
+  opacity: 1.0;
+  margin-top: 95px;
+}
+
+.tutorial-card1:hover>.html5 {
+  opacity: 1.0;
+}
+
+.tutorial-card1:hover>.html-ico {
+  opacity: 1.0;
+  margin-top: 185px;
+}
+
+.subtitle1 {
+  align-self: center;
+}
+
+.tutorial-card1:hover>.subtitle1 {
+  margin-top: 50px;
+}
+
+.subtitle1,
+.subtitle2,
+.subtitle3,
+.subtitle4 {
+  transition: all 0.5s ease;
+}
+
+.subtitle2,
+.subtitle2 {
+  transition: all 0.5s ease;
+  color: rgb(77, 77, 77);
+}
+
+.tutorial-card2:hover>.subtitle2 {
+  color: #fff;
+  text-shadow: 0 0 10px #3bd8d8, 0 0 20px #9e3bd8, 0 0 30px #3cff2a91;
+}
+
+
+.tutorial-card-link2 {
+  position: relative;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tutorial-card-link2:hover {
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+}
+
+.tutorial-card-link2:first-child:before,
+.tutorial-card-link2:last-child:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tutorial-card-link2:hover:before {
+  opacity: 1;
+  z-index: -1;
+}
+
+.tutorial-card-link2:hover {
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.subtitle3 {
+  margin-top: 135px;
+  align-self: unset;
+}
+
+.type_box {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-top: 130px;
+  align-self: unset;
+}
+
+.tutorial-card3:hover>.subtitle3 {
+  margin-top: 70px;
+}
+
+.tutorial-card3:hover>.type_box {
+  opacity: 1;
+
+}
+
+#typing-text {
+  color: #FFFFFF;
+  border: solid 1px #A8A8A8;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  background-color: #000000;
+  color: rgb(16, 223, 78);
+  font-size: 15px;
+  height: 25px;
+  width: 500px;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tutorial-card4:hover>.subtitle4 {
+  margin-top: 70px;
+}
+
+.sql-ico {
+  width: 100px;
+  height: auto;
+  opacity: 0;
+}
+
+.tutorial-card4:hover>.sql-ico {
+  opacity: 1;
+}
+
+.card {
+  text-decoration: none;
+}
+
+.card-wrapp {
+  background: rgb(61, 61, 63);
+}
+
+
+
+.go-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.go-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+.align-center {
+  align-self: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+#title1 {
+  font-family: monospace;
+  margin: 0 auto;
+}
+
+.main-content-wrapper {
+  padding: 10px;
+}
+
+.content-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-color: #ccc;
+}
+
+.content-table tbody {
+  border: 1px solid;
+  border-color: inherit;
+}
+
+td,
+th {
+  padding: 8px;
+  border: 1px solid;
+  border-color: inherit;
+}
+
+tr:nth-child(odd)>tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+tr:nth-child(even)>td {
+  color: black;
+}
+
+tr:nth-child(odd)>td {
+  background-color: #fff;
+  color: black;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+}
+
+h3 {
+  font-family: monospace;
+  margin: 10px 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.content-html-basics {
+  padding: 25px;
+  background: rgba(50, 50, 50, 0.5);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+}
+
+
+.content-html-basics2 {
+  padding: 25px;
+  font-size: 25px;
+  margin-bottom: 25px;
+  background: rgba(50, 50, 50, 0.5);
+  color: #fff;
+}
+
+.content-html-header-tags {
+  padding: 25px;
+  background: rgba(50, 50, 50, 0.5);
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+}
+
+.content-html-header-tags2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-html-tags,
+.content-html-tags1 {
+  padding: 25px;
+  background: hsla(0, 0%, 20%, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+
+.content-html-tags1:last-child {
+  margin-bottom: 20px;
+}
+
+
+
+
+/** THIS IS FOR THE CSS TUTORIAL SECTION */
+
+.content-css-syntax {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-css-syntax {
+  margin: 0 0 20px;
+}
+
+.content-css-syntax2,
+.content-css-syntax3 {
+  margin: 20px 0 0;
+}
+
+#content-css-color,
+#content-css-color-blue,
+#content-css-color-gray,
+#content-css-color-red,
+#content-css-color-f1f1f1 {
+  background: #2b2b2b;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+#content-css-color-red,
+#content-css-color-f1f1f1 {
+  color: red;
+}
+
+#content-css-color {
+  color: #cb7832;
+}
+
+#content-css-color-blue {
+  color: #6896ba;
+}
+
+#content-css-color-gray {
+  color: #bababa;
+}
+
+.content-css-syntax3 {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.content-css-selectors {
+  padding: 25px;
+  margin: 10px 0;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  flex-direction: row;
+}
+
+.content-css-inclusion,
+.content-css-inclusion2,
+.content-css-inclusion3,
+.content-css-inclusion4,
+.content-css-inclusion5,
+.content-css-inclusion6,
+.content-css-inclusion7 {
+  padding: 25px;
+  background: hsla(0, 0%, 20%, 0.5);
+}
+
+.content-css-inclusion2,
+.content-css-inclusion3,
+.content-css-inclusion4,
+.content-css-inclusion5,
+.content-css-inclusion6,
+.content-css-inclusion7 {
+  margin-bottom: 10px;
+}
+
+.content-css-inclusion6 {
+  margin: 10px 0;
+}
+
+/** The container that is gonna display the results **/
+.content-code-result {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.content-code-result h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.content-code-result h1,
+.content-code-result h2,
+.content-code-result h3,
+.content-code-result h4,
+.content-code-result h5,
+.content-code-result h6,
+.content-code-result p {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.content-code-result h3 {
+  text-align: unset;
+  margin: 0;
+}
+
+.tutorial-jump-page {
+  margin: 0 10px;
+}
+
+.tutorial-jump-page a {
+  padding: 10px 16px;
+  color: white;
+  background: #1b1c25;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+.tutorial-jump-page a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.main-content-wrapper {
+  font-size: 24px;
+}

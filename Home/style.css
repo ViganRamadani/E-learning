@@ -8,7 +8,7 @@
   margin-top: 50px;
 }
 
-.code{
+.code {
   width: 65%;
   margin: auto;
 }
@@ -23,10 +23,6 @@
 .html-code {
   background-color: rgb(89, 89, 90);
   color: #fff;
-}
-
-.css-code {
-
 }
 
 #css {
