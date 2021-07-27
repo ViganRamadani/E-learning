@@ -4,8 +4,19 @@
 
 </head>
 <body  onload="myFunction()" style="margin:0;">
+
   <div id="loader"><img src="../Image/mp4.png" width="190px" alt=""></div>
-  <h1 style="text-align: center;">Tutorials</h1>
+  <ul>
+    <li><a class="active" href="../Home/index.html">Home</a></li>
+    <li><a href="../About/index.html">About Us</a></li>
+      <li> <a href="../Contact/index.html">Contact Us</a></li>
+      <li><a href="../Porfolio/portfolio.html">Portfolio</a></li>
+        <li> <a href="../Video Tutorial/VideoTutorial.html">Video Tutorials</a></li>
+        
+        <li ><a class="active" id="login" href="../Log In/Login.html">Login</a></li>
+          <li> <a class="active" id="register" href="../Register/Register.html">Register</a></li>
+  </ul>
+  <h2 style="text-align: center;">Video Tutorials</h2>
 <class class="grid-container">
   <div class="grid-item">
     <div class="video-wrapper">
@@ -177,6 +188,8 @@
 </div>
   </div>  
 </div>
+
+
 </body>
 </html>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -331,6 +344,37 @@ function showPage() {
     .video-wrapper img{
       width: 10px;
     }
+    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
     .video-wrapper:before{
       content: " ";
       position: absolute;
